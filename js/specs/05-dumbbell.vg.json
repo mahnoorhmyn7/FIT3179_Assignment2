@@ -1,0 +1,211 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#47534e",
+      "titleColor": "#47534e",
+      "gridColor": "#e7e8e2",
+      "domainColor": "#c7cec5",
+      "tickColor": "#c7cec5",
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "labelPadding": 7
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#47534e",
+      "labelFontSize": 11,
+      "titleColor": "#47534e"
+    },
+    "text": {
+      "font": "Arial"
+    },
+    "header": {
+      "labelFont": "Arial"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "site": "Healesville",
+        "programs": 2,
+        "mentions": 5,
+        "breeding": 2,
+        "release": 1,
+        "habitat": 2,
+        "research": 0
+      },
+      {
+        "site": "Taronga Sydney",
+        "programs": 2,
+        "mentions": 6,
+        "breeding": 2,
+        "release": 2,
+        "habitat": 0,
+        "research": 2
+      },
+      {
+        "site": "Taronga Dubbo",
+        "programs": 2,
+        "mentions": 5,
+        "breeding": 2,
+        "release": 2,
+        "habitat": 0,
+        "research": 1
+      },
+      {
+        "site": "Perth Zoo",
+        "programs": 3,
+        "mentions": 7,
+        "breeding": 3,
+        "release": 3,
+        "habitat": 0,
+        "research": 1
+      },
+      {
+        "site": "Adelaide Zoo",
+        "programs": 2,
+        "mentions": 2,
+        "breeding": 2,
+        "release": 0,
+        "habitat": 0,
+        "research": 0
+      },
+      {
+        "site": "Australia Zoo",
+        "programs": 2,
+        "mentions": 3,
+        "breeding": 0,
+        "release": 1,
+        "habitat": 0,
+        "research": 2
+      }
+    ]
+  },
+  "width": "container",
+  "height": {
+    "step": 39
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#cbd6cc",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "breeding",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              3
+            ]
+          },
+          "axis": {
+            "title": "Programs mentioning activity",
+            "tickMinStep": 1
+          }
+        },
+        "x2": {
+          "field": "release"
+        },
+        "y": {
+          "field": "site",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Perth Zoo",
+            "Taronga Sydney",
+            "Taronga Dubbo",
+            "Healesville",
+            "Adelaide Zoo",
+            "Australia Zoo"
+          ]
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": [
+            "breeding",
+            "release"
+          ],
+          "as": [
+            "activity",
+            "count"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "size": 160,
+        "stroke": "#fff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "count",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "site",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Perth Zoo",
+            "Taronga Sydney",
+            "Taronga Dubbo",
+            "Healesville",
+            "Adelaide Zoo",
+            "Australia Zoo"
+          ]
+        },
+        "color": {
+          "field": "activity",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "breeding",
+              "release"
+            ],
+            "range": [
+              "#bc7044",
+              "#2f6652"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "bottom",
+            "labelExpr": "datum.label == 'breeding' ? 'Breeding / care' : 'Release / return'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site",
+            "type": "nominal"
+          },
+          {
+            "field": "activity",
+            "type": "nominal"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Program mentions"
+          }
+        ]
+      }
+    }
+  ]
+}

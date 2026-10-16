@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#47534e",
+      "titleColor": "#47534e",
+      "gridColor": "#e7e8e2",
+      "domainColor": "#c7cec5",
+      "tickColor": "#c7cec5",
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "labelPadding": 7
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#47534e",
+      "labelFontSize": 11,
+      "titleColor": "#47534e"
+    },
+    "text": {
+      "font": "Arial"
+    },
+    "header": {
+      "labelFont": "Arial"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "site": "Healesville",
+        "programs": 2,
+        "mentions": 5,
+        "breeding": 2,
+        "release": 1,
+        "habitat": 2,
+        "research": 0
+      },
+      {
+        "site": "Taronga Sydney",
+        "programs": 2,
+        "mentions": 6,
+        "breeding": 2,
+        "release": 2,
+        "habitat": 0,
+        "research": 2
+      },
+      {
+        "site": "Taronga Dubbo",
+        "programs": 2,
+        "mentions": 5,
+        "breeding": 2,
+        "release": 2,
+        "habitat": 0,
+        "research": 1
+      },
+      {
+        "site": "Perth Zoo",
+        "programs": 3,
+        "mentions": 7,
+        "breeding": 3,
+        "release": 3,
+        "habitat": 0,
+        "research": 1
+      },
+      {
+        "site": "Adelaide Zoo",
+        "programs": 2,
+        "mentions": 2,
+        "breeding": 2,
+        "release": 0,
+        "habitat": 0,
+        "research": 0
+      },
+      {
+        "site": "Australia Zoo",
+        "programs": 2,
+        "mentions": 3,
+        "breeding": 0,
+        "release": 1,
+        "habitat": 0,
+        "research": 2
+      }
+    ]
+  },
+  "width": "container",
+  "height": {
+    "step": 39
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#cbd9cf",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "field": "mentions"
+        },
+        "y": {
+          "field": "site",
+          "type": "nominal",
+          "sort": "-x"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "size": 180,
+        "color": "#2f6652"
+      },
+      "encoding": {
+        "x": {
+          "field": "mentions",
+          "type": "quantitative",
+          "title": "Activity mentions across included programs",
+          "axis": {
+            "tickMinStep": 1
+          }
+        },
+        "y": {
+          "field": "site",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "site",
+            "type": "nominal"
+          },
+          {
+            "field": "mentions",
+            "type": "quantitative",
+            "title": "Activity mentions"
+          },
+          {
+            "field": "programs",
+            "type": "quantitative",
+            "title": "Programs"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 14,
+        "baseline": "middle",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#2a483d"
+      },
+      "encoding": {
+        "x": {
+          "field": "mentions",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "site",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "mentions",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

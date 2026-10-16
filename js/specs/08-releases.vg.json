@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#47534e",
+      "titleColor": "#47534e",
+      "gridColor": "#e7e8e2",
+      "domainColor": "#c7cec5",
+      "tickColor": "#c7cec5",
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "labelPadding": 7
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#47534e",
+      "labelFontSize": 11,
+      "titleColor": "#47534e"
+    },
+    "text": {
+      "font": "Arial"
+    },
+    "header": {
+      "labelFont": "Arial"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "species": "Northern corroboree frog",
+        "site": "Taronga Zoo Sydney",
+        "reported_released": 1900,
+        "display": "1,900+",
+        "unit": "Adults",
+        "reporting_period": "Taronga site; current page, accessed Oct 2026",
+        "source_url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/corroboree-frog"
+      },
+      {
+        "species": "Western swamp tortoise",
+        "site": "Perth Zoo",
+        "reported_released": 1148,
+        "display": "1,148+",
+        "unit": "Animals",
+        "reporting_period": "May 2026 publication",
+        "source_url": "https://perthzoo.wa.gov.au/article/critically-endangered-western-swamp-turtles-hatch-at-perth-zoo"
+      },
+      {
+        "species": "Southern corroboree frog",
+        "site": "Taronga Zoo Sydney",
+        "reported_released": 630,
+        "display": "630",
+        "unit": "Adults",
+        "reporting_period": "Data updated 2025",
+        "source_url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/corroboree-frog"
+      },
+      {
+        "species": "Regent honeyeater",
+        "site": "Taronga (both sites)",
+        "reported_released": 480,
+        "display": "480+",
+        "unit": "Birds",
+        "reporting_period": "Taronga recovery page; accessed Oct 2026",
+        "source_url": "https://www.taronga.org.au/wildlife-and-conservation/conservation-and-science-programs/threatened-species-recovery"
+      },
+      {
+        "species": "Numbat",
+        "site": "Perth Zoo",
+        "reported_released": 321,
+        "display": "321+",
+        "unit": "Animals",
+        "reporting_period": "2025 report",
+        "source_url": "https://perthzoo.wa.gov.au/article/native-species-spring-baby-boom-at-perth-zoo"
+      }
+    ]
+  },
+  "width": "container",
+  "height": {
+    "step": 51
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#d4dfd6",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "field": "reported_released"
+        },
+        "y": {
+          "field": "species",
+          "type": "nominal",
+          "sort": "-x"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 190,
+        "color": "#b86745"
+      },
+      "encoding": {
+        "x": {
+          "field": "reported_released",
+          "type": "quantitative",
+          "title": "Reported cumulative releases (individual animals)",
+          "scale": {
+            "zero": true,
+            "domainMax": 2500
+          }
+        },
+        "y": {
+          "field": "species",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null,
+          "axis": {
+            "labelLimit": 200
+          }
+        },
+        "tooltip": [
+          {
+            "field": "species",
+            "type": "nominal"
+          },
+          {
+            "field": "site",
+            "type": "nominal",
+            "title": "Reporting zoo"
+          },
+          {
+            "field": "display",
+            "type": "nominal",
+            "title": "Reported count"
+          },
+          {
+            "field": "reporting_period",
+            "type": "nominal",
+            "title": "Source date"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 13,
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#38463e"
+      },
+      "encoding": {
+        "x": {
+          "field": "reported_released",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "species",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "display",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

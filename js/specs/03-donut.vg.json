@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#47534e",
+      "titleColor": "#47534e",
+      "gridColor": "#e7e8e2",
+      "domainColor": "#c7cec5",
+      "tickColor": "#c7cec5",
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "labelPadding": 7
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#47534e",
+      "labelFontSize": 11,
+      "titleColor": "#47534e"
+    },
+    "text": {
+      "font": "Arial"
+    },
+    "header": {
+      "labelFont": "Arial"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "taxon": "Bird",
+        "count": 4,
+        "share": 30.8
+      },
+      {
+        "taxon": "Mammal",
+        "count": 4,
+        "share": 30.8
+      },
+      {
+        "taxon": "Reptile",
+        "count": 3,
+        "share": 23.1
+      },
+      {
+        "taxon": "Amphibian",
+        "count": 2,
+        "share": 15.4
+      }
+    ]
+  },
+  "width": "container",
+  "height": 300,
+  "view": {
+    "stroke": null
+  },
+  "mark": {
+    "type": "arc",
+    "innerRadius": 83,
+    "outerRadius": 126,
+    "stroke": "#ffffff",
+    "strokeWidth": 3,
+    "cornerRadius": 3
+  },
+  "encoding": {
+    "theta": {
+      "field": "count",
+      "type": "quantitative",
+      "stack": true
+    },
+    "color": {
+      "field": "taxon",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Bird",
+          "Mammal",
+          "Reptile",
+          "Amphibian"
+        ],
+        "range": [
+          "#c17c44",
+          "#315d52",
+          "#818d57",
+          "#5c8da8"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "direction": "horizontal",
+        "columns": 2
+      }
+    },
+    "tooltip": [
+      {
+        "field": "taxon",
+        "type": "nominal",
+        "title": "Animal group"
+      },
+      {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Programs"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "title": "Share (%)"
+      }
+    ]
+  }
+}

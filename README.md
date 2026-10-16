@@ -1,29 +1,24 @@
-Beyond the Enclosures
+# Wildlife, Beyond the Zoo
 
-FIT3179 — Data Visualisation 2
+**FIT3179 Data Visualisation 2**  
+**Student:** Mahnoor Humayun  
+**Student ID:** 35533218  
+**Live site:** https://mahnoorhmyn7.github.io/FIT3179_Assignment2/
 
-Topic: Australian Zoos and Conservation Programs
+An interactive data investigation into selected Australian zoo conservation programs, using **eight Vega-Lite visualisations**: proportional-symbol map, donut, stacked bars, lollipop plot, dumbbell plot, matrix heatmap, bubble matrix, and dot plot.
 
-Live Website: https://mahnoorhmyn7.github.io/FIT3179_Assignment2/
+## Data and methodology
 
-Project Overview
+The data include six selected zoo/sanctuary sites, thirteen manually curated program examples, and five separately published conservation release figures. Original sources are linked from `data/programs.csv` and `data/outcomes.csv` and acknowledged on the website.
 
-This project explores how Australian zoos contribute to wildlife conservation beyond public exhibitions. Through interactive data visualisations, it examines conservation initiatives, endangered species protection, breeding programs and wildlife release outcomes.
+The records are a purposive sample, not a comprehensive census. Activity flags indicate what is documented in the cited material; missing flags do not prove the absence of an activity. Reported cumulative animal-release figures have different reporting periods and are not standardised institutional performance metrics.
 
-Visualisations
+## Files
 
-Australian Zoo Locations — An interactive map showing selected Australian zoos and wildlife conservation institutions.
+- `index.html` — self-contained web page, styling, embedded chart code and narrative
+- `style.css` — styling and responsiveness
+- `js/vega_lite_vis.js` — Vega-Lite embeds and dataset-backed specifications
+- `js/specs/` — eight independently inspectable Vega-Lite JSON specifications
+- `data/` — source CSV files and Australian outline (GeoJSON)
 
-Conservation Programs — A heatmap comparing documented conservation activities across animal groups and institutions.
-
-Wildlife Conservation Outcomes — A dot plot presenting selected published wildlife release outcomes.
-
-Tools and Technologies
-
-Vega-Lite, HTML, CSS, JavaScript and GitHub Pages.
-
-Data Sources and Limitations
-
-Data was compiled from publicly available conservation information published by Australian zoos and wildlife organisations. Source links are provided within the datasets and website.
-
-The visualisations present selected conservation examples rather than a comprehensive national comparison. Reported wildlife release figures cover different periods and should not be interpreted as direct measures of institutional performance.
+**Libraries:** Vega 5, Vega-Lite 5, Vega-Embed 6 via jsDelivr. GitHub Pages deploys from `main` / root.

@@ -1,0 +1,325 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#47534e",
+      "titleColor": "#47534e",
+      "gridColor": "#e7e8e2",
+      "domainColor": "#c7cec5",
+      "tickColor": "#c7cec5",
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "labelPadding": 7
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#47534e",
+      "labelFontSize": 11,
+      "titleColor": "#47534e"
+    },
+    "text": {
+      "font": "Arial"
+    },
+    "header": {
+      "labelFont": "Arial"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "site": "Healesville Sanctuary",
+        "species": "Helmeted honeyeater",
+        "taxon": "Bird",
+        "program": "Conservation breeding and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 1,
+        "research": 0,
+        "source_url": "https://www.zoo.org.au/fighting-extinction/local-threatened-species/helmeted-honeyeater/",
+        "note": "Breeding and released birds; habitat restoration work.",
+        "short_site": "Healesville",
+        "label": "Helmeted honeyeater · Healesville",
+        "activity_count": 3
+      },
+      {
+        "site": "Healesville Sanctuary",
+        "species": "Leadbeater’s possum",
+        "taxon": "Mammal",
+        "program": "Insurance breeding and habitat recovery",
+        "breeding": 1,
+        "release": 0,
+        "habitat": 1,
+        "research": 0,
+        "source_url": "https://www.zoo.org.au/fighting-extinction/local-threatened-species/leadbeaters-possum-lowland-population",
+        "note": "Breeding efforts in progress; do not interpret as confirmed releases.",
+        "short_site": "Healesville",
+        "label": "Leadbeater’s possum · Healesville",
+        "activity_count": 2
+      },
+      {
+        "site": "Taronga Zoo Sydney",
+        "species": "Corroboree frog",
+        "taxon": "Amphibian",
+        "program": "Breeding and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 1,
+        "source_url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/corroboree-frog",
+        "note": "Southern and Northern frogs bred for wild release.",
+        "short_site": "Taronga Sydney",
+        "label": "Corroboree frog · Taronga Sydney",
+        "activity_count": 3
+      },
+      {
+        "site": "Taronga Zoo Sydney",
+        "species": "Regent honeyeater",
+        "taxon": "Bird",
+        "program": "Breeding and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 1,
+        "source_url": "https://www.taronga.org.au/wildlife-and-conservation/conservation-and-science-programs/threatened-species-recovery",
+        "note": "Conservation breeding and monitored releases.",
+        "short_site": "Taronga Sydney",
+        "label": "Regent honeyeater · Taronga Sydney",
+        "activity_count": 3
+      },
+      {
+        "site": "Taronga Western Plains Zoo",
+        "species": "Greater bilby",
+        "taxon": "Mammal",
+        "program": "Sanctuary breeding and rewilding",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 0,
+        "source_url": "https://www.taronga.org.au/wildlife-and-conservation/animals/detail/greater-bilby",
+        "note": "Breed and release through protected sanctuary sites.",
+        "short_site": "Taronga Dubbo",
+        "label": "Greater bilby · Taronga Dubbo",
+        "activity_count": 2
+      },
+      {
+        "site": "Taronga Western Plains Zoo",
+        "species": "Plains-wanderer",
+        "taxon": "Bird",
+        "program": "Breeding and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 1,
+        "source_url": "https://www.taronga.org.au/about/newsroom/media-releases/rare-plains-wanderers-released-back-into-the-wild",
+        "note": "Captive breeding and reintroduction trials.",
+        "short_site": "Taronga Dubbo",
+        "label": "Plains-wanderer · Taronga Dubbo",
+        "activity_count": 3
+      },
+      {
+        "site": "Perth Zoo",
+        "species": "Western swamp tortoise",
+        "taxon": "Reptile",
+        "program": "Breeding and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 1,
+        "source_url": "https://perthzoo.wa.gov.au/saving-wildlife/breeding-conservation/western-swamp-tortoise-breeding-program",
+        "note": "Release with monitoring and captive breeding.",
+        "short_site": "Perth Zoo",
+        "label": "Western swamp tortoise · Perth Zoo",
+        "activity_count": 3
+      },
+      {
+        "site": "Perth Zoo",
+        "species": "Numbat",
+        "taxon": "Mammal",
+        "program": "Breeding and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 0,
+        "source_url": "https://perthzoo.wa.gov.au/breeding",
+        "note": "Native species breeding for release.",
+        "short_site": "Perth Zoo",
+        "label": "Numbat · Perth Zoo",
+        "activity_count": 2
+      },
+      {
+        "site": "Perth Zoo",
+        "species": "White-bellied frog",
+        "taxon": "Amphibian",
+        "program": "Rearing and release",
+        "breeding": 1,
+        "release": 1,
+        "habitat": 0,
+        "research": 0,
+        "source_url": "https://perthzoo.wa.gov.au/article/native-species-spring-baby-boom-at-perth-zoo",
+        "note": "Conservation-reared frogs released to support wild populations.",
+        "short_site": "Perth Zoo",
+        "label": "White-bellied frog · Perth Zoo",
+        "activity_count": 2
+      },
+      {
+        "site": "Adelaide Zoo",
+        "species": "Orange-bellied parrot",
+        "taxon": "Bird",
+        "program": "Conservation breeding",
+        "breeding": 1,
+        "release": 0,
+        "habitat": 0,
+        "research": 0,
+        "source_url": "https://www.zoossa.com.au/conservation-programs/orange-bellied-parrot/",
+        "note": "Captive breeding at Adelaide Zoo.",
+        "short_site": "Adelaide Zoo",
+        "label": "Orange-bellied parrot · Adelaide Zoo",
+        "activity_count": 1
+      },
+      {
+        "site": "Adelaide Zoo",
+        "species": "Western swamp tortoise",
+        "taxon": "Reptile",
+        "program": "Insurance population",
+        "breeding": 1,
+        "release": 0,
+        "habitat": 0,
+        "research": 0,
+        "source_url": "https://perthzoo.wa.gov.au/saving-wildlife/breeding-conservation/western-swamp-tortoise-breeding-program",
+        "note": "A separate backup insurance population, not a confirmed local release.",
+        "short_site": "Adelaide Zoo",
+        "label": "Western swamp tortoise · Adelaide Zoo",
+        "activity_count": 1
+      },
+      {
+        "site": "Australia Zoo",
+        "species": "Estuarine crocodile",
+        "taxon": "Reptile",
+        "program": "Field research and public education",
+        "breeding": 0,
+        "release": 0,
+        "habitat": 0,
+        "research": 1,
+        "source_url": "https://australiazoo.com.au/support-wildlife/crocodiles/research/",
+        "note": "GPS/acoustic tracking and community education.",
+        "short_site": "Australia Zoo",
+        "label": "Estuarine crocodile · Australia Zoo",
+        "activity_count": 1
+      },
+      {
+        "site": "Australia Zoo",
+        "species": "Koala",
+        "taxon": "Mammal",
+        "program": "Wildlife hospital care",
+        "breeding": 0,
+        "release": 1,
+        "habitat": 0,
+        "research": 1,
+        "source_url": "https://australiazoo.com.au/about-us/the-irwins/terri/",
+        "note": "Wildlife hospital rehabilitation and release; counted as release pathway.",
+        "short_site": "Australia Zoo",
+        "label": "Koala · Australia Zoo",
+        "activity_count": 2
+      }
+    ]
+  },
+  "width": "container",
+  "height": {
+    "step": 39
+  },
+  "params": [
+    {
+      "name": "focusGroup",
+      "select": {
+        "type": "point",
+        "fields": [
+          "taxon"
+        ]
+      },
+      "bind": "legend"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "x": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Selected species programs",
+      "axis": {
+        "tickMinStep": 1
+      }
+    },
+    "y": {
+      "field": "short_site",
+      "type": "nominal",
+      "sort": [
+        "Perth Zoo",
+        "Taronga Sydney",
+        "Taronga Dubbo",
+        "Healesville",
+        "Adelaide Zoo",
+        "Australia Zoo"
+      ],
+      "title": null,
+      "axis": {
+        "labelLimit": 130
+      }
+    },
+    "color": {
+      "field": "taxon",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Bird",
+          "Mammal",
+          "Reptile",
+          "Amphibian"
+        ],
+        "range": [
+          "#c17c44",
+          "#315d52",
+          "#818d57",
+          "#5c8da8"
+        ]
+      },
+      "legend": {
+        "title": "Animal group",
+        "orient": "bottom"
+      }
+    },
+    "opacity": {
+      "condition": {
+        "param": "focusGroup",
+        "value": 1
+      },
+      "value": 0.23
+    },
+    "tooltip": [
+      {
+        "field": "short_site",
+        "type": "nominal",
+        "title": "Site"
+      },
+      {
+        "field": "taxon",
+        "type": "nominal",
+        "title": "Animal group"
+      },
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Programs"
+      }
+    ]
+  }
+}
