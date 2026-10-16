@@ -1,0 +1,14 @@
+site,species,taxon,program,breeding,release,habitat,research,source_url,note
+Healesville Sanctuary,Helmeted honeyeater,Bird,Conservation breeding and release,1,1,1,0,https://www.zoo.org.au/fighting-extinction/local-threatened-species/helmeted-honeyeater/,Breeding and released birds; habitat restoration work.
+Healesville Sanctuary,Leadbeater’s possum,Mammal,Insurance breeding and habitat recovery,1,0,1,0,https://www.zoo.org.au/fighting-extinction/local-threatened-species/leadbeaters-possum-lowland-population,Breeding efforts in progress; do not interpret as confirmed releases.
+Taronga Zoo Sydney,Corroboree frog,Amphibian,Breeding and release,1,1,0,1,https://www.taronga.org.au/wildlife-and-conservation/animals/detail/corroboree-frog,Southern and Northern frogs bred for wild release.
+Taronga Zoo Sydney,Regent honeyeater,Bird,Breeding and release,1,1,0,1,https://www.taronga.org.au/wildlife-and-conservation/conservation-and-science-programs/threatened-species-recovery,Conservation breeding and monitored releases.
+Taronga Western Plains Zoo,Greater bilby,Mammal,Sanctuary breeding and rewilding,1,1,0,0,https://www.taronga.org.au/wildlife-and-conservation/animals/detail/greater-bilby,Breed and release through protected sanctuary sites.
+Taronga Western Plains Zoo,Plains-wanderer,Bird,Breeding and release,1,1,0,1,https://www.taronga.org.au/about/newsroom/media-releases/rare-plains-wanderers-released-back-into-the-wild,Captive breeding and reintroduction trials.
+Perth Zoo,Western swamp tortoise,Reptile,Breeding and release,1,1,0,1,https://perthzoo.wa.gov.au/saving-wildlife/breeding-conservation/western-swamp-tortoise-breeding-program,Release with monitoring and captive breeding.
+Perth Zoo,Numbat,Mammal,Breeding and release,1,1,0,0,https://perthzoo.wa.gov.au/breeding,Native species breeding for release.
+Perth Zoo,White-bellied frog,Amphibian,Rearing and release,1,1,0,0,https://perthzoo.wa.gov.au/article/native-species-spring-baby-boom-at-perth-zoo,Conservation-reared frogs released to support wild populations.
+Adelaide Zoo,Orange-bellied parrot,Bird,Conservation breeding,1,0,0,0,https://www.zoossa.com.au/conservation-programs/orange-bellied-parrot/,Captive breeding at Adelaide Zoo.
+Adelaide Zoo,Western swamp tortoise,Reptile,Insurance population,1,0,0,0,https://perthzoo.wa.gov.au/saving-wildlife/breeding-conservation/western-swamp-tortoise-breeding-program,"A separate backup insurance population, not a confirmed local release."
+Australia Zoo,Estuarine crocodile,Reptile,Field research and public education,0,0,0,1,https://australiazoo.com.au/support-wildlife/crocodiles/research/,GPS/acoustic tracking and community education.
+Australia Zoo,Koala,Mammal,Wildlife hospital care,0,1,0,1,https://australiazoo.com.au/about-us/the-irwins/terri/,Wildlife hospital rehabilitation and release; counted as release pathway.

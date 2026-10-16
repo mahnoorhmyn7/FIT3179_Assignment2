@@ -1,18 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Australian Zoos and Conservation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="An interactive FIT3179 data story on Australian zoos and species conservation, built with Vega-Lite." />
+  <title>Beyond the Enclosures | Australian Zoos and Conservation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Beyond the Enclosures</h1>
-  <h2>Australian Zoos and Wildlife Conservation</h2>
+  <header class="nav-bar">
+    <div class="nav-inner container">
+      <a class="brand" href="#top"><span class="brand-mark">✳</span> FIELDNOTES<span class="brand-dot">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#map-section">The map</a>
+        <a href="#programs-section">Programs</a>
+        <a href="#impact-section">The impact</a>
+        <a href="#sources-section">Sources</a>
+      </nav>
+      <span class="course-tag">FIT3179 · A2</span>
+    </div>
+  </header>
 
-  <p>
-    Exploring how Australian zoos contribute to
-    wildlife protection, endangered species recovery,
-    and conservation programs.
-  </p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A DATA STORY / AUSTRALIA</div>
+          <h1>Beyond the<br><em>enclosures.</em></h1>
+          <p class="hero-lead">What if the most important work of a zoo happens where visitors never go?</p>
+          <p class="hero-text">From breeding critically endangered frogs to returning rare mammals to the wild, Australian zoos increasingly serve as conservation partners—not simply places to see animals.</p>
+          <a class="primary-link" href="#map-section">Explore the story <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb orb-back"></div><div class="orb orb-front"></div>
+          <div class="hero-halo"></div>
+          <div class="orbit-label top-label">BREED</div><div class="orbit-label bottom-label">RESTORE</div>
+          <div class="hero-center">A WILDER<br>FUTURE<span>↗</span></div>
+          <div class="hero-art-caption">Conservation begins beyond the fence.</div>
+        </div>
+      </div>
+      <div class="container hero-footer"><span>SCROLL TO DISCOVER</span><span>01 / 04</span></div>
+    </section>
+
+    <section class="intro-strip">
+      <div class="container stat-grid">
+        <div class="stat"><strong>06</strong><div><span>Featured zoo / sanctuary sites</span><small>Selected examples, not an exhaustive census</small></div></div>
+        <div class="stat"><strong>05</strong><div><span>Australian states</span><small>From Western Australia to Queensland</small></div></div>
+        <div class="stat"><strong>13</strong><div><span>Documented program examples</span><small>Curated from official organisation sources</small></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="map-section">
+      <div class="section-number">01 / WHERE THE WORK BEGINS</div>
+      <div class="section-heading"><div><h2>Conservation has<br><em>many addresses.</em></h2></div><p>Behind familiar zoo gates are breeding centres, wildlife hospitals and research teams. These six sites show the geographic reach of different conservation approaches.</p></div>
+      <div class="visual-frame map-frame"><div class="frame-title"><span class="frame-icon">◎</span><div><h3>Selected conservation sites across Australia</h3><p>Hover over each point to identify the organisation and its location.</p></div></div>
+        <div id="zooMap" class="vega-vis map-vis" role="img" aria-label="Vega-Lite map showing six zoo and wildlife conservation sites in Australia"><div class="vis-loading">Loading interactive map…</div></div>
+        <div class="frame-note"><span class="key-dot"></span> Each marker represents a zoo or sanctuary location, not the full geographic extent of its field projects. <span class="note-right">Source: sites.csv</span></div>
+      </div>
+      <div class="insight"><span class="insight-tag">KEY IDEA</span><p>The places where species are cared for and the habitats where they must ultimately survive are often hundreds of kilometres apart. Conservation is a coordinated network—not a single site.</p></div>
+    </section>
+
+    <section class="section section-warm" id="programs-section">
+      <div class="container">
+        <div class="section-number">02 / WHAT ZOOS ACTUALLY DO</div>
+        <div class="section-heading"><div><h2>More than<br><em>breeding animals.</em></h2></div><p>Effective recovery can combine captive care, habitat work, field research and release. Compare which activities are documented for the selected species programs.</p></div>
+        <div class="visual-frame heatmap-frame">
+          <div class="frame-header-row"><div class="frame-title"><span class="frame-icon">▦</span><div><h3>Which conservation activities are documented?</h3><p>One row per selected program. Filled cells indicate documented activity—not its size or success.</p></div></div><div class="filter-area"><label for="taxonFilter">Animal group</label><select id="taxonFilter"><option value="All">All groups</option><option value="Bird">Birds</option><option value="Mammal">Mammals</option><option value="Amphibian">Amphibians</option><option value="Reptile">Reptiles</option></select></div></div>
+          <div id="programHeatmap" class="vega-vis heatmap-vis" role="img" aria-label="Interactive Vega-Lite matrix comparing conservation activities across thirteen programs"><div class="vis-loading">Loading program matrix…</div></div>
+          <div class="frame-note">Use the animal-group filter, or hover over a cell for program details. <span class="note-right">Source: programs.csv</span></div>
+        </div>
+        <div class="insight"><span class="insight-tag">BEHIND THE DATA</span><p>Programs do not all follow the same pathway. For example, Adelaide Zoo supports a Western swamp tortoise <strong>insurance population</strong>, while Australia Zoo's crocodile work centres on research and public education.</p></div>
+      </div>
+    </section>
+
+    <section class="section container" id="impact-section">
+      <div class="section-number">03 / EVIDENCE OF ACTION</div>
+      <div class="section-heading"><div><h2>From careful breeding<br>to <em>returning home.</em></h2></div><p>Some conservation initiatives publish numbers of animals returned to the wild. The figures below are selected examples of reported releases—not comparable performance rankings.</p></div>
+      <div class="visual-frame impact-frame">
+        <div class="frame-title"><span class="frame-icon">↗</span><div><h3>Published release outcomes, selected species programs</h3><p>Adults/animals released; figures reflect the reporting date of each organisation.</p></div></div>
+        <div id="outcomesChart" class="vega-vis" role="img" aria-label="Vega-Lite dot chart comparing five published counts of animals released into the wild"><div class="vis-loading">Loading release data…</div></div>
+        <div class="frame-note">A “+” indicates that the source reports more than that number. Reporting dates, species and measurement definitions differ. <span class="note-right">Source: outcomes.csv</span></div>
+      </div>
+      <div class="side-by-side">
+        <div class="story-card"><div class="story-kicker">CASE STUDY / PERTH ZOO</div><h3>A species brought back from the brink</h3><p>The Western swamp tortoise was once believed extinct. Perth Zoo's breed-for-release collaboration has returned over 1,148 tortoises to protected habitat, according to its May 2026 update.</p><a target="_blank" rel="noopener noreferrer" href="https://perthzoo.wa.gov.au/article/critically-endangered-western-swamp-turtles-hatch-at-perth-zoo">Read the original report ↗</a></div>
+        <div class="story-card"><div class="story-kicker">CASE STUDY / TARONGA</div><h3>Small frogs, large recovery effort</h3><p>Taronga's corroboree frog recovery work involves breeding, egg and adult release, and ongoing partnerships. Its published numbers illustrate how zoo care links to habitat-based recovery.</p><a target="_blank" rel="noopener noreferrer" href="https://www.taronga.org.au/wildlife-and-conservation/animals/detail/corroboree-frog">Read the original report ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section takeaway-section">
+      <div class="container">
+        <div class="section-number muted-number">04 / THE BIGGER PICTURE</div>
+        <h2>Conservation is a <em>process,</em><br>not an exhibit.</h2>
+        <div class="journey" aria-label="Common conservation recovery pathway">
+          <div class="journey-step"><span>01</span><strong>Protect</strong><p>Safeguard threatened populations and genetic diversity.</p></div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step"><span>02</span><strong>Breed & care</strong><p>Provide specialised facilities and veterinary support.</p></div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step"><span>03</span><strong>Return</strong><p>Release animals where safe conditions and habitat exist.</p></div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step"><span>04</span><strong>Monitor</strong><p>Study survival, restore habitat and adapt the program.</p></div>
+        </div>
+        <p class="takeaway-note">This is a conceptual pathway, not a claim that every species or zoo has completed every step.</p>
+      </div>
+    </section>
+
+    <section class="section container sources-section" id="sources-section">
+      <div class="section-number">SOURCES & METHODOLOGY</div>
+      <div class="section-heading"><div><h2>Where the data<br><em>comes from.</em></h2></div><p>Transparent sources are essential: the sample was manually curated from official zoo publications. Values are descriptive, not estimates of the sector's total conservation impact.</p></div>
+      <div class="sources-grid">
+        <div class="sources-col"><h3>Primary sources</h3>
+          <a href="https://www.zoo.org.au/fighting-extinction/local-threatened-species/helmeted-honeyeater/" target="_blank" rel="noopener noreferrer">Zoos Victoria — Helmeted honeyeater ↗</a>
+          <a href="https://www.zoo.org.au/fighting-extinction/local-threatened-species/leadbeaters-possum-lowland-population" target="_blank" rel="noopener noreferrer">Zoos Victoria — Leadbeater's possum ↗</a>
+          <a href="https://www.taronga.org.au/wildlife-and-conservation/animals/detail/corroboree-frog" target="_blank" rel="noopener noreferrer">Taronga — Corroboree frog recovery ↗</a>
+          <a href="https://www.taronga.org.au/wildlife-and-conservation/conservation-and-science-programs/threatened-species-recovery" target="_blank" rel="noopener noreferrer">Taronga — Threatened species recovery ↗</a>
+          <a href="https://perthzoo.wa.gov.au/breeding" target="_blank" rel="noopener noreferrer">Perth Zoo — Breeding for conservation ↗</a>
+          <a href="https://perthzoo.wa.gov.au/article/critically-endangered-western-swamp-turtles-hatch-at-perth-zoo" target="_blank" rel="noopener noreferrer">Perth Zoo — Western swamp tortoise, May 2026 ↗</a>
+          <a href="https://perthzoo.wa.gov.au/article/native-species-spring-baby-boom-at-perth-zoo" target="_blank" rel="noopener noreferrer">Perth Zoo — Native species, 2025 ↗</a>
+          <a href="https://www.zoossa.com.au/conservation-programs/orange-bellied-parrot/" target="_blank" rel="noopener noreferrer">Zoos SA — Orange-bellied parrot ↗</a>
+          <a href="https://australiazoo.com.au/support-wildlife/crocodiles/research/" target="_blank" rel="noopener noreferrer">Australia Zoo — Crocodile field research ↗</a>
+        </div>
+        <div class="method-col"><h3>How to read this project</h3>
+          <p><strong>Coverage.</strong> Six selected sites across five states, and thirteen examples of projects. Locations are approximate site coordinates, not conservation field-work sites.</p>
+          <p><strong>Method.</strong> Each activity cell was manually coded from a cited source. Blank cells mean “not recorded in this small review,” not “the zoo does not perform this activity.” The release dot plot combines different published report dates; counts are not directly comparable.</p>
+          <p><strong>Technical stack.</strong> Vega-Lite, Vega, Vega-Embed, HTML, CSS and JavaScript. Data is stored in local CSV and GeoJSON files for reproducibility.</p>
+          <p><strong>Data accessed.</strong> October 2026. The Australian outline was created from the GSHHS low-resolution coastline distributed with Basemap; geographic boundaries are schematic.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-grid"><span class="brand">✳ FIELDNOTES<span class="brand-dot">.</span></span><span>BEYOND THE ENCLOSURES · FIT3179 DATA VISUALISATION 2</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js"></script>
+  <script src="js/vega_lite_vis.js"></script>
 </body>
 </html>

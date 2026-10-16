@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "width": "container",
+  "height": 390,
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#dae8df",
+        "stroke": "#a7c1ae",
+        "strokeWidth": 1.4
+      }
+    },
+    {
+      "data": {
+        "url": "data/sites.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "size": 340,
+        "stroke": "#ffffff",
+        "strokeWidth": 2.5,
+        "cursor": "pointer",
+        "opacity": 0.94
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "WA",
+              "SA",
+              "VIC",
+              "NSW",
+              "QLD"
+            ],
+            "range": [
+              "#b28540",
+              "#6c8e84",
+              "#315e4b",
+              "#bc7656",
+              "#8c9f57"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolSize": 130,
+            "labelFontSize": 11
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site",
+            "title": "Zoo / sanctuary"
+          },
+          {
+            "field": "place",
+            "title": "Location"
+          },
+          {
+            "field": "operator",
+            "title": "Organisation"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelColor": "#294638"
+    },
+    "background": null
+  }
+}

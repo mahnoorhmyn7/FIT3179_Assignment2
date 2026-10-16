@@ -1,0 +1,133 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/outcomes.csv"
+  },
+  "width": "container",
+  "height": {
+    "step": 53
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#e5ede6",
+        "height": 13,
+        "cornerRadiusEnd": 7
+      },
+      "encoding": {
+        "x": {
+          "field": "reported_released",
+          "type": "quantitative",
+          "axis": {
+            "title": "Reported animals released (minimum / published number)",
+            "titlePadding": 15,
+            "grid": true,
+            "gridColor": "#e7e9e5",
+            "labelFontSize": 11
+          },
+          "scale": {
+            "domain": [
+              0,
+              2300
+            ]
+          }
+        },
+        "y": {
+          "field": "species",
+          "type": "nominal",
+          "sort": "-x",
+          "axis": {
+            "title": null,
+            "labelFontSize": 12,
+            "labelLimit": 185,
+            "labelPadding": 8
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 165,
+        "color": "#2f634c",
+        "stroke": "#fff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "reported_released",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "species",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "tooltip": [
+          {
+            "field": "species",
+            "title": "Species"
+          },
+          {
+            "field": "site",
+            "title": "Reporting zoo(s)"
+          },
+          {
+            "field": "display",
+            "title": "Reported releases"
+          },
+          {
+            "field": "unit",
+            "title": "Unit"
+          },
+          {
+            "field": "reporting_period",
+            "title": "Source date"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 14,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#214635"
+      },
+      "encoding": {
+        "x": {
+          "field": "reported_released",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "species",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "display",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "shared"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "tickSize": 0
+    },
+    "background": null
+  }
+}
