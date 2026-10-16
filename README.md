@@ -22,3 +22,7 @@ The records are a purposive sample, not a comprehensive census. Activity flags i
 - `data/` — source CSV files and Australian outline (GeoJSON)
 
 **Libraries:** Vega 5, Vega-Lite 5, Vega-Embed 6 via jsDelivr. GitHub Pages deploys from `main` / root.
+
+
+## Rendering reliability
+Charts use Vega-Lite in-browser; the repository also includes static SVG previews under `assets/` so a browser network or rendering failure does not leave empty panels. If a preview appears instead of a Vega chart, open browser developer tools > Console to see the specific Vega-Lite error.
